@@ -11,7 +11,6 @@ body{
     background-color: grey;
     border: solid 1px lightgray;
     border-radius: 10px;
-    margin-top: 10px;
     font-size: 24px;
     font-style: bold;
     font-family: fantasy;
@@ -27,6 +26,7 @@ body{
     font-size: 24px;
     flex-shrink: 0;
     background-color: brown;
+    border-radius: 10px;
 }
 
 .item{
@@ -58,4 +58,20 @@ body{
 
 .spacearound{
     justify-content: space-around;
+}
+
+.center{
+    justify-content: center;
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+
+.left{
+    justify-content: flex-start;
+}
+
+.right{
+    justify-content: flex-end;
 }
