@@ -1,57 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox sandbox</title>
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="container spacebetween">
-        <h1 class="cont-title">space-between</h1>
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-    </div>
-
-    <div class="container spaceevenly">
-        <h1 class="cont-title">space-evenly</h1>
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-    </div>
-
-    <div class="container spacearound">
-        <h1 class="cont-title">space-around</h1>
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-    </div>
-    <div class="container nowrap">
-        <div class="container center">
-            <h1 class="cont-title">center</h1>
+    <div class="container wrap border-grey">
+        <div class="flex width-100">
+            <h1 class="cont-title">space-between</h1>
+        </div>
+        <div class="container wrap spacebetween">
             <div class="item">1</div>
             <div class="item">2</div>
             <div class="item">3</div>
@@ -63,8 +26,13 @@
             <div class="item">9</div>
             <div class="item">10</div>
         </div>
-        <div class="container left">
-            <h1 class="cont-title">left</h1>
+    </div>
+
+    <div class="container wrap border-grey">
+        <div class="flex width-100">
+            <h1 class="cont-title">space-evenly</h1>
+        </div>
+        <div class="container wrap spaceevenly">
             <div class="item">1</div>
             <div class="item">2</div>
             <div class="item">3</div>
@@ -76,8 +44,13 @@
             <div class="item">9</div>
             <div class="item">10</div>
         </div>
-        <div class="container right">
-            <h1 class="cont-title">right</h1>
+    </div>
+    <!-- space around -->
+    <div class="container wrap border-grey">
+        <div class="flex width-100">
+            <h1 class="cont-title">space-around</h1>
+        </div>
+        <div class="container wrap spacearound">
             <div class="item">1</div>
             <div class="item">2</div>
             <div class="item">3</div>
@@ -88,7 +61,340 @@
             <div class="item">8</div>
             <div class="item">9</div>
             <div class="item">10</div>
+        </div>
+    </div>
+    <!-- left center right -->
+    <div class="container nowrap border-grey">
+        <div class="flex wrap border-grey border-round grow-1 left">
+            <div class="flex width-100">
+                <h1 class="cont-title">left</h1>
+            </div>
+            <div class="flex wrap">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+        <div class="flex wrap border-grey border-round grow-1 center">
+            <div class="flex width-100">
+                <h1 class="cont-title">center</h1>
+            </div>
+            <div class="flex wrap">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+        <div class="flex wrap border-grey border-round grow-1 right">
+            <div class="flex width-100">
+                <h1 class="cont-title">right</h1>
+            </div>
+            <div class="flex wrap right">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- col 1 -->
+    <div class="container nowrap height-40 border-grey">
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">flex-start</h1>
+            </div>
+            <div class="flex wrap column max-height-50 flex-start width-100">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">flex-end</h1>
+            </div>
+            <div class="flex wrap column max-height-50 flex-end width-100">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">justify center</h1>
+            </div>
+            <div class="flex wrap column center max-height-50 width-100">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">Justify left</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 left">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">Justify right</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 right">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- col 2 -->
+    <div class="container nowrap height-40 border-grey">
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">align-items start-flex</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-flex-start">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">align-items center</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-center">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">align-items flex-end</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-flex-end">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100 max-height-50">
+                <h1 class="cont-title height-auto ">flex-start space-between</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-flex-start align-spacebetween">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title height-auto ">flex-start space-around</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-flex-start align-spacearound">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+    </div>
+
+      <!-- col 3 -->
+      <div class="container nowrap height-40 border-grey">
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">flex end + align flex end</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 flex-end align-flex-end">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">flex start + align flex end</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 flex-start align-flex-end">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title">align-items flex-end</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 flex-end align-nospace">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100 max-height-50">
+                <h1 class="cont-title height-auto ">flex-start space-between</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-flex-start align-spacebetween">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
+        </div>
+
+        <div class="flex wrap width-20 border-grey border-round">
+            <div class="flex width-100">
+                <h1 class="cont-title height-auto ">flex-start space-around</h1>
+            </div>
+            <div class="flex wrap column max-height-50 width-100 align-nospace">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
